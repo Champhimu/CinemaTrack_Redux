@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addMovie, toggleWatched, deleteMovie, editMovie, rateMovie } from '../../Redux/WatchlistSlice';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -10,7 +10,6 @@ function Watchlist({ movies, watchlistName, watchlistId }) {
   const [deleteMovieId, setDeleteMovieId] = useState();
   const [showModal, setShowModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
-  const [toastMessage, setToastMessage] = useState('');
   const [showRating, setShowRating] = useState(false);
 
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -150,7 +149,7 @@ function Watchlist({ movies, watchlistName, watchlistId }) {
                   />
                   <div className="card-body" style={{ background: "#ededf1" }}>
                     {/* <h5 className="card-title text-center">{movie.title}</h5> */}
-                    <strong>{movie.title}</strong> ({movie.year}) - <span class="badge rounded-pill bg-info">{movie.genre}</span>
+                    <strong>{movie.title}</strong> ({movie.year}) - <span className="badge rounded-pill bg-info">{movie.genre}</span>
                     <p>{movie.description}</p>
                     <p>Watched: {movie.watched ? 'Yes' : 'No'}</p>
                     <p>Rating: {movie.rating}</p>
@@ -259,9 +258,9 @@ function Watchlist({ movies, watchlistName, watchlistId }) {
       </div>
 
       {/* Add Modal */}
-      <div class={`modal fade ${showModal ? 'show' : ''}`} id="addMoviesModal" style={{ display: showModal ? 'block' : 'none' }} tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
+      <div className={`modal fade ${showModal ? 'show' : ''}`} id="addMoviesModal" style={{ display: showModal ? 'block' : 'none' }} tabindex="-1">
+        <div className="modal-dialog">
+          <div className="modal-content">
             <form onSubmit={handleSubmit}>
               <div className="modal-header">
                 <h5 className="modal-title">Add Movie</h5>
@@ -289,9 +288,9 @@ function Watchlist({ movies, watchlistName, watchlistId }) {
                   <input type="text" className="form-control" id="genre" value={genre} onChange={(e) => setGenre(e.target.value)} />
                 </div>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" onClick={() => setShowModal(!showModal)}>Close</button>
-                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={() => setShowModal(!showModal)}>Close</button>
+                <button type="submit" className="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
               </div>
             </form>
           </div>
@@ -301,15 +300,15 @@ function Watchlist({ movies, watchlistName, watchlistId }) {
       {showModal && <div className="modal-backdrop fade show" onClick={() => setShowModal(false)}></div>}
 
 
-      <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
+      <div className="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body">
               Are you sure you want to remove from the WatchList?
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              <button class="btn btn-danger" data-bs-dismiss="modal" onClick={() => handleDeleteMovie(deleteMovieId)}>Yes</button>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button className="btn btn-danger" data-bs-dismiss="modal" onClick={() => handleDeleteMovie(deleteMovieId)}>Yes</button>
             </div>
           </div>
         </div>

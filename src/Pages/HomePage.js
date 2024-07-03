@@ -12,8 +12,8 @@ const HomePage = () => {
             <header>
                 <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#EAF7FF" }}>
                     <div className="container-fluid d-flex justify-content-between align-items-center">
-                        <a className="navbar-brand" href="#">
-                            <img src='/Images/Logo.png' alt="Brand Logo" style={{ width: "200px", height: "150px" }} />
+                        <a className="navbar-brand">
+                            <img src='/Images/Logo.png' alt="BrandLogo" style={{ width: "200px", height: "150px" }} />
                         </a>
                         <button className="btn btn-outline-primary" style={{ color: "#004080", borderColor: "#004080", marginBottom: "70px" }}>Login as Guest</button>
                     </div>
@@ -47,7 +47,7 @@ const HomePage = () => {
 
 
                         <div className="col-lg-6">
-                            <img src="/Images/Hero_Left.png" alt="Hero Left Image" className="img-fluid" style={{ height: "100%", width: "100%" }} />
+                            <img src="/Images/Hero_Left.png" alt="HeroLeftImage" className="img-fluid" style={{ height: "100%", width: "100%" }} />
                         </div>
                     </div>
                 </div>

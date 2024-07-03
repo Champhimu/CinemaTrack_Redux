@@ -28,11 +28,11 @@ const MainContent = () => {
       <div className='mb-3'>
         <div className="row">
           {data.map((movie, index) => (
-            <div class="col-sm-3 mb-3 mb-sm-0" key={index}>
-              <div class="card h-100">
-                <img src={`${movie.poster_path}`} class="card-img-top" alt={movie.original_title} style={{ maxHeight: "250px" }} />
-                <div class="card-body" style={{ background: "#ededf1" }}>
-                  <h5 class="card-title">{movie.original_title}</h5>
+            <div className="col-sm-3 mb-3 mb-sm-0" key={index}>
+              <div className="card h-100">
+                <img src={`${movie.poster_path}`} className="card-img-top" alt={movie.original_title} style={{ maxHeight: "250px" }} />
+                <div className="card-body" style={{ background: "#ededf1" }}>
+                  <h5 className="card-title">{movie.original_title}</h5>
                   <div className="d-flex justify-content-between" style={{ fontSize: "20px" }}>
                     <p className="card-year mb-0">{movie.release_date}</p>
                     <p className="card-rating mb-0" style={{ color: "green" }}>{movie.vote_average}/10</p>

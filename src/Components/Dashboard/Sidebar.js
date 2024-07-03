@@ -59,13 +59,13 @@ const Sidebar = () => {
             {/* Add your lists here */}
             {
               watchlists?.length > 0 ? (
-                <ul class="nav nav-pills flex-column">
+                <ul className="nav nav-pills flex-column">
                   {watchlists.map((watchlist, index) => (
                     <li className="nav-item" key={index}>
                       <div className="d-flex justify-content-between">
-                        <a className="nav-link" aria-current="page" style={{ color: "black" }} href="#" onClick={() => navigate(`/dynamicList/${watchlist.id}`)}>{watchlist.name}</a>
+                        <a className="nav-link" aria-current="page" style={{ color: "black" }} onClick={() => navigate(`/dynamicList/${watchlist.id}`)}>{watchlist.name}</a>
                         {/* <button className='btn btn-md' style={{fontSize: "20px"}} > X </button> */}
-                        <button type="button" class="btn-close btn-sm" style={{ fontSize: "12px", marginTop: "12px" }} data-bs-target="#exampleModalToggle" data-bs-toggle="modal" onClick={() => setDeleteWatchListId(watchlist.id)}></button>
+                        <button type="button" className="btn-close btn-sm" style={{ fontSize: "12px", marginTop: "12px" }} data-bs-target="#exampleModalToggle" data-bs-toggle="modal" onClick={() => setDeleteWatchListId(watchlist.id)}></button>
                       </div>
                     </li>
                   ))}
@@ -84,38 +84,38 @@ const Sidebar = () => {
 
       {/* Adding WatchList Modal */}
       <div className={`modal fade ${showModal ? 'show' : ''}`} id="staticCreateWatchList" tabindex="-1" style={{ display: showModal ? 'block' : 'none' }}>
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Create WatchList</h1>
-              <button type="button" class="btn-close" onClick={() => setShowModal(false)}></button>
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h1 className="modal-title fs-5" id="staticBackdropLabel">Create WatchList</h1>
+              <button type="button" className="btn-close" onClick={() => setShowModal(false)}></button>
             </div>
-            <div class="modal-body">
-              <div class="mb-3 row">
-                <label for="staticEmail" class="col-sm-3 col-form-label">WatchList Name</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="staticWatchList" placeholder='Type here..' value={watchlistName} onChange={e => setWatchlistName(e.target.value)} />
+            <div className="modal-body">
+              <div className="mb-3 row">
+                <label for="staticEmail" className="col-sm-3 col-form-label">WatchList Name</label>
+                <div className="col-sm-9">
+                  <input type="text" className="form-control" id="staticWatchList" placeholder='Type here..' value={watchlistName} onChange={e => setWatchlistName(e.target.value)} />
                 </div>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" onClick={() => setShowModal(false)}>Close</button>
-              <button type="button" class="btn btn-primary" onClick={() => handleAddWatchlist()}>Create</button>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>Close</button>
+              <button type="button" className="btn btn-primary" onClick={() => handleAddWatchlist()}>Create</button>
             </div>
           </div>
         </div>
       </div>
       {showModal && <div className="modal-backdrop fade show" onClick={() => setShowModal(false)}></div>}
 
-      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
+      <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body">
               Are you sure you want to remove the WatchList?
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-              <button class="btn btn-danger" data-bs-dismiss="modal" onClick={() => dispatch(deleteWatchlist(deleteWatchListId)) && navigate('/dashboard')}>Yes</button>
+            <div className="modal-footer">
+              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button className="btn btn-danger" data-bs-dismiss="modal" onClick={() => dispatch(deleteWatchlist(deleteWatchListId)) && navigate('/dashboard')}>Yes</button>
             </div>
           </div>
         </div>
