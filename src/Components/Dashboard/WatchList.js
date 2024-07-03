@@ -256,9 +256,10 @@ function Watchlist({ movies, watchlistName, watchlistId }) {
           </div>
         </div>
       </div>
+      {showEditModal && <div className="modal-backdrop fade show" onClick={() => setShowEditModal(false)}></div>}
 
       {/* Add Modal */}
-      <div className={`modal fade ${showModal ? 'show' : ''}`} id="addMoviesModal" style={{ display: showModal ? 'block' : 'none' }} tabindex="-1">
+      <div className={`modal fade ${showModal ? 'show' : ''}`} id="addMoviesModal" style={{ display: showModal ? 'block' : 'none' }} tabIndex="-1">
         <div className="modal-dialog">
           <div className="modal-content">
             <form onSubmit={handleSubmit}>
@@ -300,7 +301,7 @@ function Watchlist({ movies, watchlistName, watchlistId }) {
       {showModal && <div className="modal-backdrop fade show" onClick={() => setShowModal(false)}></div>}
 
 
-      <div className="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div className="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-body">

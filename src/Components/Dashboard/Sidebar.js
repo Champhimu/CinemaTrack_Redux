@@ -50,7 +50,7 @@ const Sidebar = () => {
           {/* <input type="text" className="form-control mb-3" placeholder="Search" /> */}
           <div className="nav nav-pills flex-column">
             {/* <div className='nav-item'> */}
-            <a href="/" onClick={() => navigate("/dashboard")} className="nav-link active">Home</a>
+            <a href=" " onClick={() => navigate("/dashboard")} className="nav-link active">Home</a>
             {/* </div> */}
           </div>
           <button className="btn w-100 mt-3" style={{ backgroundColor: "#AB2928", color: "white" }} onClick={() => setShowModal(!showModal)}> Create watchlist</button>
@@ -63,7 +63,7 @@ const Sidebar = () => {
                   {watchlists.map((watchlist, index) => (
                     <li className="nav-item" key={index}>
                       <div className="d-flex justify-content-between">
-                        <a href="/" className="nav-link" aria-current="page" style={{ color: "black" }} onClick={() => navigate(`/dynamicList/${watchlist.id}`)}>{watchlist.name}</a>
+                        <a href=" " className="nav-link" aria-current="page" style={{ color: "black" }} onClick={() => navigate(`/dynamicList/${watchlist.id}`)}>{watchlist.name}</a>
                         {/* <button className='btn btn-md' style={{fontSize: "20px"}} > X </button> */}
                         <button type="button" className="btn-close btn-sm" style={{ fontSize: "12px", marginTop: "12px" }} data-bs-target="#exampleModalToggle" data-bs-toggle="modal" onClick={() => setDeleteWatchListId(watchlist.id)}></button>
                       </div>

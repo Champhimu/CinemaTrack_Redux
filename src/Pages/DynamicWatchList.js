@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 const DynamicWatchList = () => {
   const {id} = useParams();
   const watchlists = useSelector((state) => state.watchlist.watchlists)
-  const existingWatchlist = watchlists.filter(f => f.id == id);
+  const existingWatchlist = watchlists.filter(f => f.id === Number(id));
 
   console.log(id);
   console.log(existingWatchlist);
