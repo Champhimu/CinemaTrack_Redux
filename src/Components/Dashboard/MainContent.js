@@ -16,7 +16,7 @@ const MainContent = () => {
   }, [])
 
   return (
-    <div className="p-4 flex-grow-1 text-dark" style={{ maxWidth: "83%" }}>
+    <div className="p-4 flex-grow-1 text-dark">
       <h3>Welcome Back</h3>
       <p>Browse movies, add them to watchlists, and rate and review them. Simply click the <b>+</b> to add a movie, the poster to view details or <b>✔</b> to mark the movie as watched.</p>
       <div className="input-group mb-3">
@@ -28,7 +28,7 @@ const MainContent = () => {
       <div className='mb-3'>
         <div className="row">
           {data.map((movie, index) => (
-            <div className="col-sm-3 mb-3 mb-sm-0" key={index}>
+            <div className="col-md-4 col-lg-3 mb-3 mb-2" key={index}>
               <div className="card h-100">
                 <img src={`${movie.poster_path}`} className="card-img-top" alt={movie.original_title} style={{ maxHeight: "250px" }} />
                 <div className="card-body" style={{ background: "#ededf1" }}>

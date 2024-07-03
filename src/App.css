@@ -55,3 +55,54 @@
   max-width: 200px; /* Adjust max-width as needed */
   margin: 0 auto;
 }
+
+
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 250px; 
+  background-color: #EAF7FF; 
+}
+
+.watchlist {
+  margin-left: 250px;
+  width: 100%;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .watchlist {
+    margin-left: 200px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 150px;
+  }
+
+  .watchlist {
+    margin-left: 170px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    position: static; 
+    width: 100%;
+    height: auto;
+  }
+
+  .watchlist {
+    margin-left: 0;
+    width: 100%;
+    height: auto; 
+  }
+}

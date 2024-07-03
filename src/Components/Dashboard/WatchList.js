@@ -129,7 +129,7 @@ function Watchlist({ movies, watchlistName, watchlistId }) {
             <h1 className="my-4">{watchlistName}</h1>
           </div>
           <div className="col m-auto d-flex justify-content-end me-5">
-            <button className="btn btn-primary" onClick={() => setShowModal(!showModal)}>
+            <button className="btn btn-primary mb-2" onClick={() => setShowModal(!showModal)}>
               Add Movies
             </button>
           </div>
@@ -139,7 +139,7 @@ function Watchlist({ movies, watchlistName, watchlistId }) {
             <p className="text-center">No movies in your watchlist. Add some!</p>
           ) : (
             movies.map((movie) => (
-              <div className="col-sm-3 mb-3" key={movie.id}>
+              <div className="col-md-4 col-lg-3 mb-3" key={movie.id}>
                 <div className="card h-100">
                   <img
                     src={movie.poster_path || movie.image || "https://nextlevelpictures.com/wp-content/uploads/Popcorn-drink-and-filmstrip.jpg"}

@@ -6,9 +6,13 @@ const DashboardPage = () => {
   return (
     <>
     <div className="d-flex" style={{ height: '100vh', backgroundColor: '#EAF7FF' }}>
-      <Sidebar />
-      <MainContent />
-    </div>
+  <div className="sidebar">
+    <Sidebar />
+  </div>
+  <div className="watchlist">
+    <MainContent />
+  </div>
+</div>
     
     </>
   )
