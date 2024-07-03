@@ -12,7 +12,7 @@ const HomePage = () => {
             <header>
                 <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "#EAF7FF" }}>
                     <div className="container-fluid d-flex justify-content-between align-items-center">
-                        <a role="button" tabIndex="0"  className="navbar-brand">
+                        <a href="/"  className="navbar-brand">
                             <img src='/Images/Logo.png' alt="BrandLogo" style={{ width: "200px", height: "150px" }} />
                         </a>
                         <button className="btn btn-outline-primary" style={{ color: "#004080", borderColor: "#004080", marginBottom: "70px" }}>Login as Guest</button>
