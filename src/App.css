@@ -58,7 +58,7 @@
 
 
 .sidebar {
-  position: fixed;
+  position: absolute;
   height: 100vh;
   width: 250px; 
   background-color: #EAF7FF; 
