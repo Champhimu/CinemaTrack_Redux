@@ -50,7 +50,7 @@ const Sidebar = () => {
           {/* <input type="text" className="form-control mb-3" placeholder="Search" /> */}
           <div className="nav nav-pills flex-column">
             {/* <div className='nav-item'> */}
-            <a onClick={() => navigate("/dashboard")} className="nav-link active">Home</a>
+            <a role="button" tabIndex="0" onClick={() => navigate("/dashboard")} className="nav-link active">Home</a>
             {/* </div> */}
           </div>
           <button className="btn w-100 mt-3" style={{ backgroundColor: "#AB2928", color: "white" }} onClick={() => setShowModal(!showModal)}> Create watchlist</button>
@@ -63,7 +63,7 @@ const Sidebar = () => {
                   {watchlists.map((watchlist, index) => (
                     <li className="nav-item" key={index}>
                       <div className="d-flex justify-content-between">
-                        <a className="nav-link" aria-current="page" style={{ color: "black" }} onClick={() => navigate(`/dynamicList/${watchlist.id}`)}>{watchlist.name}</a>
+                        <a role="button" tabIndex="0" className="nav-link" aria-current="page" style={{ color: "black" }} onClick={() => navigate(`/dynamicList/${watchlist.id}`)}>{watchlist.name}</a>
                         {/* <button className='btn btn-md' style={{fontSize: "20px"}} > X </button> */}
                         <button type="button" className="btn-close btn-sm" style={{ fontSize: "12px", marginTop: "12px" }} data-bs-target="#exampleModalToggle" data-bs-toggle="modal" onClick={() => setDeleteWatchListId(watchlist.id)}></button>
                       </div>
@@ -83,7 +83,7 @@ const Sidebar = () => {
       </div>
 
       {/* Adding WatchList Modal */}
-      <div className={`modal fade ${showModal ? 'show' : ''}`} id="staticCreateWatchList" tabindex="-1" style={{ display: showModal ? 'block' : 'none' }}>
+      <div className={`modal fade ${showModal ? 'show' : ''}`} id="staticCreateWatchList" tabIndex="-1" style={{ display: showModal ? 'block' : 'none' }}>
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
@@ -92,7 +92,7 @@ const Sidebar = () => {
             </div>
             <div className="modal-body">
               <div className="mb-3 row">
-                <label for="staticEmail" className="col-sm-3 col-form-label">WatchList Name</label>
+                <label htmlFor="staticEmail" className="col-sm-3 col-form-label">WatchList Name</label>
                 <div className="col-sm-9">
                   <input type="text" className="form-control" id="staticWatchList" placeholder='Type here..' value={watchlistName} onChange={e => setWatchlistName(e.target.value)} />
                 </div>
@@ -107,7 +107,7 @@ const Sidebar = () => {
       </div>
       {showModal && <div className="modal-backdrop fade show" onClick={() => setShowModal(false)}></div>}
 
-      <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div className="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             <div className="modal-body">
