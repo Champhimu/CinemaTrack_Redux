@@ -50,7 +50,7 @@ const Sidebar = () => {
           {/* <input type="text" className="form-control mb-3" placeholder="Search" /> */}
           <div className="nav nav-pills flex-column">
             {/* <div className='nav-item'> */}
-            <button href=" " onClick={() => navigate("/dashboard")} className="nav-link active">Home</button>
+            <button onClick={() => navigate("/dashboard")} className="nav-link active">Home</button>
             {/* </div> */}
           </div>
           <button className="btn w-100 mt-3" style={{ backgroundColor: "#AB2928", color: "white" }} onClick={() => setShowModal(!showModal)}> Create watchlist</button>
